@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn: {{ subtopic }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #1a73e8;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .example-item {
+            margin-bottom: 20px;
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📘 Learn: {{ subtopic }} - Class {{ student_class }}</h1>
+        <h2>📚 Subject: {{ subject }}</h2>
+       
+        
+        <hr>
+
+        <div class="section">
+            <h2>📝 Explanation</h2>
+            {% if explanation %}
+                <p>{{ explanation.replace('\n', '<br>')|safe }}</p>
+            {% else %}
+                <p>No definitions available.</p>
+            {% endif %}
+        </div>
+
+        
+    </div>
+</body>
+</html>

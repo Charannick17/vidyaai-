@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    max-width: 600px;
+}
+nav {
+    margin-bottom: 15px;
+}
+.chatbox {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 250px;
+    padding: 10px;
+    background: #f4f4f4;
+    border: 1px solid #280101;
+    border-radius: 10px;
+}
